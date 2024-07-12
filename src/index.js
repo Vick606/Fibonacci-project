@@ -1,13 +1,11 @@
 const { fibs, fibsRec } = require('./fibonacci');
 
-console.log("Iterative Fibonacci:");
-console.log(fibs(8));
-console.log(fibs(5));
-console.log(fibs(2));
-console.log(fibs(0));
+const n = parseInt(process.argv[2]) || 8;  // Default to 8 if no argument is provided
+
+console.log(`Generating Fibonacci sequence for n = ${n}`);
+
+console.log("\nIterative Fibonacci:");
+console.log(fibs(n));
 
 console.log("\nRecursive Fibonacci:");
-console.log(fibsRec(8));
-console.log(fibsRec(5));
-console.log(fibsRec(2));
-console.log(fibsRec(0));
+console.log(fibsRec(n));
